@@ -1,0 +1,26 @@
+Start testing: Mar 15 14:53 IST
+----------------------------------------------------------
+1/1 Testing: Tester
+1/1 Test: Tester
+Command: "/home/archit/cpp_starter_project/build/tester"
+Directory: /home/archit/cpp_starter_project/build
+"Tester" start time: Mar 15 14:53 IST
+Output:
+----------------------------------------------------------
+reco bins
+
+8464, 70243, 10853, 2224, 
+
+prediciton
+
+8464, 70243, 10853, 1389, 
+
+<end of output>
+Test time =   0.98 sec
+----------------------------------------------------------
+Test Passed.
+"Tester" end time: Mar 15 14:53 IST
+"Tester" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Mar 15 14:53 IST

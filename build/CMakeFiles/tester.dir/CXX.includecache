@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/archit/cpp_starter_project/tester.cpp
+iostream
+-
+stdio.h
+-
+stdlib.h
+-
+vector
+-
+string.h
+-
+
