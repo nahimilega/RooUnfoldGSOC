@@ -44,7 +44,7 @@ void RooUnfoldGSOC()
         prediction.SetBinContent(i+1,current+contribution);
     }
   }
-  cout << "==================================== PREDICT (With ) =====================================" << endl;
+  cout << "=============================== PREDICT (With Normalization) =====================================" << endl;
 
   // in this case the prediction and reco should line up exactly.
   cout<<"reco bins"<<endl;
@@ -68,7 +68,7 @@ void RooUnfoldGSOC()
   // matrix operations using the built in ROOT TMatrix objects and operations. Test that it gives the same
   // predictions as the loop method.
 
-  cout << "==================================== PREDICT (With Normalization) =====================================" << endl;
+  cout << "===================== PREDICT (With Normalization and Matrix Operation) =====================================" << endl;
 
 
   TMatrix normalisedResponse = TMatrix(4,4);
