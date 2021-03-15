@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/archit/cpp_starter_project
+CMAKE_SOURCE_DIR = /home/archit/RooUnfoldGSOC
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/archit/cpp_starter_project/build
+CMAKE_BINARY_DIR = /home/archit/RooUnfoldGSOC/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -91,9 +91,9 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/archit/cpp_starter_project/build/CMakeFiles /home/archit/cpp_starter_project/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/archit/RooUnfoldGSOC/build/CMakeFiles /home/archit/RooUnfoldGSOC/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/archit/cpp_starter_project/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/archit/RooUnfoldGSOC/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -134,46 +134,6 @@ tester/fast:
 	$(MAKE) -f CMakeFiles/tester.dir/build.make CMakeFiles/tester.dir/build
 .PHONY : tester/fast
 
-#=============================================================================
-# Target rules for targets named intro
-
-# Build rule for target.
-intro: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 intro
-.PHONY : intro
-
-# fast build rule for target.
-intro/fast:
-	$(MAKE) -f CMakeFiles/intro.dir/build.make CMakeFiles/intro.dir/build
-.PHONY : intro/fast
-
-main.o: main.cpp.o
-
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/intro.dir/build.make CMakeFiles/intro.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/intro.dir/build.make CMakeFiles/intro.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/intro.dir/build.make CMakeFiles/intro.dir/main.cpp.s
-.PHONY : main.cpp.s
-
 tester.o: tester.cpp.o
 
 .PHONY : tester.o
@@ -211,10 +171,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... test"
 	@echo "... tester"
-	@echo "... intro"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
 	@echo "... tester.o"
 	@echo "... tester.i"
 	@echo "... tester.s"

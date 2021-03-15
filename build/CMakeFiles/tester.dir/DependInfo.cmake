@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/archit/cpp_starter_project/tester.cpp" "/home/archit/cpp_starter_project/build/CMakeFiles/tester.dir/tester.cpp.o"
+  "/home/archit/RooUnfoldGSOC/tester.cpp" "/home/archit/RooUnfoldGSOC/build/CMakeFiles/tester.dir/tester.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

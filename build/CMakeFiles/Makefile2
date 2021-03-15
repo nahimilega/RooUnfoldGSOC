@@ -44,17 +44,16 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/archit/cpp_starter_project
+CMAKE_SOURCE_DIR = /home/archit/RooUnfoldGSOC
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/archit/cpp_starter_project/build
+CMAKE_BINARY_DIR = /home/archit/RooUnfoldGSOC/build
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
 all: CMakeFiles/tester.dir/all
-all: CMakeFiles/intro.dir/all
 
 .PHONY : all
 
@@ -65,7 +64,6 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/tester.dir/clean
-clean: CMakeFiles/intro.dir/clean
 
 .PHONY : clean
 
@@ -76,14 +74,14 @@ clean: CMakeFiles/intro.dir/clean
 CMakeFiles/tester.dir/all:
 	$(MAKE) -f CMakeFiles/tester.dir/build.make CMakeFiles/tester.dir/depend
 	$(MAKE) -f CMakeFiles/tester.dir/build.make CMakeFiles/tester.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/archit/cpp_starter_project/build/CMakeFiles --progress-num=3,4 "Built target tester"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/archit/RooUnfoldGSOC/build/CMakeFiles --progress-num=1,2 "Built target tester"
 .PHONY : CMakeFiles/tester.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/tester.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/archit/cpp_starter_project/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/archit/RooUnfoldGSOC/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/tester.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/archit/cpp_starter_project/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/archit/RooUnfoldGSOC/build/CMakeFiles 0
 .PHONY : CMakeFiles/tester.dir/rule
 
 # Convenience name for target.
@@ -95,33 +93,6 @@ tester: CMakeFiles/tester.dir/rule
 CMakeFiles/tester.dir/clean:
 	$(MAKE) -f CMakeFiles/tester.dir/build.make CMakeFiles/tester.dir/clean
 .PHONY : CMakeFiles/tester.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/intro.dir
-
-# All Build rule for target.
-CMakeFiles/intro.dir/all:
-	$(MAKE) -f CMakeFiles/intro.dir/build.make CMakeFiles/intro.dir/depend
-	$(MAKE) -f CMakeFiles/intro.dir/build.make CMakeFiles/intro.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/archit/cpp_starter_project/build/CMakeFiles --progress-num=1,2 "Built target intro"
-.PHONY : CMakeFiles/intro.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/intro.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/archit/cpp_starter_project/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/intro.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/archit/cpp_starter_project/build/CMakeFiles 0
-.PHONY : CMakeFiles/intro.dir/rule
-
-# Convenience name for target.
-intro: CMakeFiles/intro.dir/rule
-
-.PHONY : intro
-
-# clean rule for target.
-CMakeFiles/intro.dir/clean:
-	$(MAKE) -f CMakeFiles/intro.dir/build.make CMakeFiles/intro.dir/clean
-.PHONY : CMakeFiles/intro.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
