@@ -36,6 +36,8 @@ void RooUnfoldGSOC()
   
   // now one would think that for given distribution we can use this response to
   // predict how that distribution would look in our detector by multiplying through
+  
+  cout << "=============================== PREDICT (With Normalization) =====================================" << endl;
   TH1D prediction = TH1D("prediction","prediction",4,-10.,10.);
   for (Int_t i= 0; i<reco.GetNbinsX(); i++){
     for (Int_t j= 0; j<truth.GetNbinsX(); j++){
@@ -44,7 +46,6 @@ void RooUnfoldGSOC()
         prediction.SetBinContent(i+1,current+contribution);
     }
   }
-  cout << "=============================== PREDICT (With Normalization) =====================================" << endl;
 
   // in this case the prediction and reco should line up exactly.
   cout<<"reco bins"<<endl;
@@ -59,17 +60,8 @@ void RooUnfoldGSOC()
   }
   
   cout<<endl;
-  // TASK 2 (Optional): the predictions don't line up. This is because the response needs to be normalised
-  // by the number of events measured in truth. Loop over the bins of the response to normalise
-  // each element to be the probability of reconstructing the event in each bin given the bin it
-  // truthfully came from. (divide each by truth). Ensure the prediction now lines up with reco.
-
-  // TASK 3 (Optional): here we perform the operation reco = Response.dot(truth). replace the loops with
-  // matrix operations using the built in ROOT TMatrix objects and operations. Test that it gives the same
-  // predictions as the loop method.
 
   cout << "===================== PREDICT (With Normalization and Matrix Operation) =====================================" << endl;
-
 
   TMatrix normalisedResponse = TMatrix(4,4);
   TVector truth_mat = TVector(4);
@@ -82,6 +74,8 @@ void RooUnfoldGSOC()
         normalisedResponse[i][j] = response.GetBinContent(i+1,j+1)/truth.GetBinContent(j+1);
     }
   }
+  
+  TVector predicted = normalisedResponse*truth_mat;
 
   cout<<"reco bins"<<endl;
   for (Int_t i=0; i<reco.GetNbinsX(); i++){
@@ -89,13 +83,21 @@ void RooUnfoldGSOC()
   }
   cout<<endl;
 
-
-  TVector predicted = normalisedResponse*truth_mat;
   cout<<"prediciton"<<endl;
   for (Int_t i= 0; i<predicted.GetNoElements(); i++) {
     cout<<predicted[i]<<", ";
   }
   cout<<endl;
+
+  // TASK 2 (Optional): the predictions don't line up. This is because the response needs to be normalised
+  // by the number of events measured in truth. Loop over the bins of the response to normalise
+  // each element to be the probability of reconstructing the event in each bin given the bin it
+  // truthfully came from. (divide each by truth). Ensure the prediction now lines up with reco.
+
+  // TASK 3 (Optional): here we perform the operation reco = Response.dot(truth). replace the loops with
+  // matrix operations using the built in ROOT TMatrix objects and operations. Test that it gives the same
+  // predictions as the loop method.
+
   // TASK 4 (Optional): Setup a Series of CTests to verify that different operations give the same results.
   
 }

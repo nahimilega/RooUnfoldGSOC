@@ -23,7 +23,7 @@ string GetStdoutFromCommand(string cmd) {
 }
 
 int main() {
-  string rootOutput = GetStdoutFromCommand("root -q -l RooUnfoldGSOC.cxx | tail -n +5");
+  string rootOutput = GetStdoutFromCommand("./RooUnfoldGSOC | tail -n +3");
   //cout << rootOutput[0] << endl;
 
   string s = rootOutput ;
