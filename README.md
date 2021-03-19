@@ -1,24 +1,57 @@
 # RooUnfoldGSOC
 
-For rniing the 
-```
-root -l 
-```
 
-For tesing 
+## Task 1
+Correctly set up ROOT with all the environment variables. This can be achieved using ROOT's `thisroot.sh`. </br>
+
+Check out code
+```
+git clone https://github.com/nahimilega/RooUnfoldGSOC.git
+cd RooUnfoldGSOC
+```
+To execute the macro using ROOT interactive shell.
+```
+root -l RooUnfoldGSOC.cxx
+```
+![Output](docs/images/q1_root_interactive.png?raw=true )
+Now, to compile the code under CMake against the installation of ROOT
 ```
 mkdir build
 cd build
 cmake ..
 make
-cmake
+./RooUnfoldGSOC
 ```
+![Output](docs/images/task_1.png?raw=true )
+## Task 2: Normalization
+For the detailed mathamatical explanation of the procedure kindly refer [here](docs/GSoC_RooUnfold.pdf)
+![Output](docs/images/task_2_output.png?raw=true )
 
-## Task 1
+## Task 3: Matrix Operation
+Now to replace the loop with the matrix operation, we would be first converting theresponseandtruthfrom histograms to a ROOT TMatrix object.responsewould be a 4×4 matrixandtruthwould be a ROOT vector object with 4 rows.
 
-## Task 2
+![Output](docs/images/task3.png?raw=true )
 
-## Task 3
+For the detailed mathamatical explanation of the procedure kindly refer here
 
-## Task 4
 
+## Task 4: Developing CTests
+To confirm the similarity of results reported by loop and that of matrix, I developed a `tester.cpp` to run the compiled file and compare the reported output.
+
+To run ctest
+```
+mkdir build
+cd build
+cmake ..
+make
+ctest
+```
+![Output](docs/images/task4.png?raw=true )
+</br>
+</br>
+</br>
+For the detailed report kindly refer [here](docs/GSoC_RooUnfold.pdf)
+
+### Disclamer 
+This is my first time trying out C++ development, so some of the naming conventions miight not be a standard approach. </br>
+I am fortunate to get industary level experiance in python develpment and also did a couple of college and school projects using C/C++, however I am really thrilled to start gain experiacne in C++ development process, infact one of my todo this year :)
