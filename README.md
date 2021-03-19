@@ -14,6 +14,7 @@ To execute the macro using ROOT interactive shell.
 root -l RooUnfoldGSOC.cxx
 ```
 ![Output](docs/images/q1_root_interactive.png?raw=true )
+
 Now, to compile the code under CMake against the installation of ROOT
 ```
 mkdir build
@@ -53,5 +54,6 @@ ctest
 For the detailed report kindly refer [here](docs/GSoC_RooUnfold.pdf)
 
 ### Disclamer 
-This is my first time trying out C++ development, so some of the naming conventions miight not be a standard approach. </br>
-I am fortunate to get industary level experiance in python develpment and also did a couple of college and school projects using C/C++, however I am really thrilled to start gain experiacne in C++ development process, infact one of my todo this year :)
+
+This is my first time trying out C++ development, so some of the naming conventions might not be a standard approach.  </br>
+I am fortunate to get industry level experience in python development and also did a couple of college and school projects using C/C++. However, I am really thrilled to start my C++ development journey. Hopefully, by this year, I would be well acquainted with the C++ development process, in fact, one of my todos this year :)
